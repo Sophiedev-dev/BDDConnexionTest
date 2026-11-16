@@ -1,0 +1,11 @@
+node_modules/
+reports/
+test-results/
+.env
+
+# Secrets de session : le profil Chrome de test est hors du projet (%LOCALAPPDATA%\bdd-chatgpt-profil),
+# ces règles empêchent tout de même de versionner un profil ou un état de session copié ici par erreur.
+bdd-chatgpt-profil/
+*.storage-state.json
+Cookies
+Cookies-journal

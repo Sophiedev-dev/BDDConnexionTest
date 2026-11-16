@@ -1,0 +1,35 @@
+{
+  "name": "bdd-chatgpt-authentication",
+  "version": "0.1.0",
+  "description": "Tests BDD (Cucumber, Gherkin, Playwright) du processus de connexion réel de ChatGPT - projet universitaire",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cucumber-js --profile headed",
+    "test:github": "cucumber-js --tags @github",
+    "test:github:visible": "cucumber-js --profile headed --tags @github",
+    "test:github:rapport": "node scripts/ouvrir-rapport.js --profile headed --tags @github",
+    "test:manuel": "cucumber-js --profile manuel",
+    "test:technique": "cucumber-js --tags @technique",
+    "test:dry": "cucumber-js --profile dry-run",
+    "profil:connexion": "node scripts/ouvrir-profil-chrome.js",
+    "browsers:install": "playwright install chromium",
+    "rapport": "node scripts/ouvrir-rapport.js"
+  },
+  "keywords": [
+    "bdd",
+    "cucumber",
+    "gherkin",
+    "playwright",
+    "e2e"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "playwright": "^1.65.0"
+  }
+}
